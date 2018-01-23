@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sandec.wakhyudi.scc.activities.DaftarLowonganActivity">
+
+<FrameLayout
+    android:id="@+id/fl_untuk_fragment"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</FrameLayout>
+
+<android.support.design.widget.BottomNavigationView
+    android:id="@+id/bnv"
+    android:layout_weight="0"
+    app:menu="@menu/daftar_menu"
+    android:layout_gravity="bottom"
+    android:background="@color/colorPrimary"
+    app:itemIconTint="@color/putih"
+    app:itemTextColor="@color/putih"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</android.support.design.widget.BottomNavigationView>
+
+</android.support.design.widget.CoordinatorLayout>

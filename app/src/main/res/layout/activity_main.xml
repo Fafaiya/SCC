@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f25b04"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sandec.wakhyudi.scc.activities.MainActivity">
+
+    <ss.com.bannerslider.views.BannerSlider
+        android:id="@+id/bs_main"
+        app:defaultIndicators="circle"
+        android:paddingTop="100dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ss.com.bannerslider.views.BannerSlider>
+    <LinearLayout
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="SIGNUP"
+            android:onClick="signUp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:textColor="@color/putih"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp" />
+        <Button
+            android:text="LOGIN"
+            android:onClick="login"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:textColor="@color/putih"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+</LinearLayout>
