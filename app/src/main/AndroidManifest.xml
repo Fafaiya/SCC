@@ -9,7 +9,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeBaru">
         <activity
             android:name=".activities.MainActivity"
             android:theme="@style/AppTheme">
@@ -19,10 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.DaftarLowonganActivity"
-            android:theme="@style/AppThemeBaru" />
-        <activity android:name=".activities.DetailLowonganActivity"></activity>
+        <activity android:name=".activities.DaftarLowonganActivity" />
+        <activity android:name=".activities.DetailLowonganActivity" />
+        <activity android:name=".activities.ListLamaranActivity"></activity>
     </application>
 
 </manifest>

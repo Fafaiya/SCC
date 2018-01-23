@@ -41,6 +41,7 @@
 
         <Button
             android:id="@+id/btn_detail_daftar"
+            android:onClick="daftarKerja"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -49,6 +50,7 @@
             android:textColor="@color/putih" />
 
         <LinearLayout
+            android:id="@+id/ll_lamaran"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -171,6 +173,7 @@
 
             <Button
                 android:id="@+id/btn_detail_kirim"
+                android:onClick="kirimLamaran"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
