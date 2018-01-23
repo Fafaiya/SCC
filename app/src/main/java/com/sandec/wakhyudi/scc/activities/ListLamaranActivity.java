@@ -14,6 +14,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.sandec.wakhyudi.scc.R;
 import com.sandec.wakhyudi.scc.adapter.LamaranAdapter;
+import com.sandec.wakhyudi.scc.model.Lamaran;
 import com.sandec.wakhyudi.scc.model.Perusahaan;
 
 import org.json.JSONArray;
@@ -25,7 +26,7 @@ import java.util.List;
 
 public class ListLamaranActivity extends AppCompatActivity {
     RecyclerView rvListLamaran;
-    List<Perusahaan> listLamaran = new ArrayList<>();
+    List<Lamaran> listLamaran = new ArrayList<>();
     String url = "https://script.google.com/macros/s/AKfycbyt6w414MNvYZEA_he5VJMGr50HfuUBAdwT0iXfR7zqOX1cgpsp/exec?action=read&sheetName=pelamar";
 
     @Override
@@ -51,10 +52,14 @@ public class ListLamaranActivity extends AppCompatActivity {
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject dataLamaran = jsonArray.getJSONObject(i);
                                 String id = dataLamaran.getString("id_pelamar");
+                                String nikPelamar = dataLamaran.getString("nik_pelamar");
+                                String namaPelamar = dataLamaran.getString("nama");
+                                String cvPelamar = dataLamaran.getString("link_cv");
+                                String emailPelamar = dataLamaran.getString("email");
                                 String namaPerusahaan = dataLamaran.getString("perusahaan");
                                 String iconPerusahaan = dataLamaran.getString("icon_perusahaan");
 
-                                Perusahaan lamaran = new Perusahaan(namaPerusahaan, iconPerusahaan, "belum");
+                                Lamaran lamaran = new Lamaran(id,nikPelamar,namaPelamar,cvPelamar,emailPelamar,namaPerusahaan,iconPerusahaan);
                                 listLamaran.add(lamaran);
                             }
                         } catch (JSONException e) {
